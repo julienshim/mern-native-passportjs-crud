@@ -8,6 +8,11 @@ This untitledProject is an on-going proof of concept. Currently in alpha.
 
 There relationship between React Native and traditional servers is poorly documented. Wanted to created boilerplate code for everyone interested in developing in React Native (not create-react-native app, not EXPOnent).
 
+**Requirements**
+
+  React Native CLI, which allows you to create React Native projects via `react-native init <project name>` and linking via `react-native link`.
+  * npm install -g react-native-cli
+
 **Backend Setup**
 
 1) Running `npm install` in backend will install the following npm packages:
