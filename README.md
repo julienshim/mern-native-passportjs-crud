@@ -42,6 +42,8 @@ export const google = {
 };
 ```
 
+3) `npm start` to launch the backend server
+
 [More to come throughout during development]
 
 
