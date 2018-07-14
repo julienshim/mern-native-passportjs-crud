@@ -29,6 +29,8 @@ See /backend README.md
     * npm install react-native-safari-view ^2.1.0
     * npm install react-native-vector-icons ^4.6.0
 
+2) Running `react-native run-ios` will run the app in an iPhone 6 Plus environment by default. You can run app in a device such as iPhone 8 Plus by running `react-native run-ios --simulator 'iPhone 8 Plus'`.
+
 [More to come throughout during development]
 
 
