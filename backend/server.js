@@ -1,6 +1,8 @@
 import express from 'express';
 import authRoutes from './routes/auth-routes'
 import passportSetup from './config/passport-setup';
+import { mongodb } from './config/config';
+import mongoose from 'mongoose';
 import fs from 'fs';
 import https from 'https';
 import path from 'path';
@@ -13,6 +15,11 @@ const PORT = 3000;
 // Initialize Passport
 app.use(passport.initialize());
 app.use(passport.session());
+
+//Connect to MongoDB
+mongoose.connect(mongodb.dbURI, () => {
+  console.log('Connected to MongoDB');
+});
 
 //Set up routes
 app.use('/auth', authRoutes);
