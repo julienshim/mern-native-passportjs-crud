@@ -47,7 +47,7 @@ export const google = {
 };
 ```
 
-3) SSL 
+3)  Server SSL due to Facebook OAuth requirements.
 
 ```
 
