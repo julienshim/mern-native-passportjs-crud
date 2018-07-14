@@ -4,7 +4,7 @@ import passport from 'passport';
 const router = express.Router();
 
 // Set up Facebook auth routes
-router.get('/facebook', passport.authenticate('facebook'));
+router.get('/facebook', passport.authenticate('facebook', {scope: ['email']}));
 
 router.get('/facebook/callback',
   passport.authenticate('facebook', { failureRedirect: '/facebook' }),
@@ -12,7 +12,7 @@ router.get('/facebook/callback',
   (req, res) => res.redirect('OAuthLogin://login?user=' + JSON.stringify(req.user)));
 
 // Set up Google auth routes
-router.get('/google', passport.authenticate('google', { scope: ['profile'] }));
+router.get('/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
 
 router.get('/google/callback',
   passport.authenticate('google', { failureRedirect: '/google' }),
