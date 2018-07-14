@@ -1,4 +1,5 @@
 import express from 'express';
+import authRoutes from './routes/auth-routes'
 import passportSetup from './config/passport-setup';
 import fs from 'fs';
 import https from 'https';
@@ -13,20 +14,8 @@ const PORT = 3000;
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Set up Facebook auth routes
-app.get('/auth/facebook', passport.authenticate('facebook'));
-
-app.get('/auth/facebook/callback',
-  passport.authenticate('facebook', { failureRedirect: '/auth/facebook' }),
-  // Redirect user back to the mobile app using Linking with a custom protocol OAuthLogin
-  (req, res) => res.redirect('OAuthLogin://login?user=' + JSON.stringify(req.user)));
-
-// Set up Google auth routes
-app.get('/auth/google', passport.authenticate('google', { scope: ['profile'] }));
-
-app.get('/auth/google/callback',
-  passport.authenticate('google', { failureRedirect: '/auth/google' }),
-  (req, res) => res.redirect('OAuthLogin://login?user=' + JSON.stringify(req.user)));
+//Set up routes
+app.use('/auth', authRoutes);
 
 // Launch the server on the port 3000
 // const server = app.listen(3000, () => {
