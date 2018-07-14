@@ -8,7 +8,7 @@ This untitledProject is an on-going proof of concept. Currently in alpha.
 
 There relationship between React Native and traditional servers is poorly documented. Wanted to created boilerplate code for everyone interested in developing in React Native (not create-react-native app, not EXPOnent).
 
-**Client Setup**
+**Backend Setup**
 
 See /backend README.md
 
