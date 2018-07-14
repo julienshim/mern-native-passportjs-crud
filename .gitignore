@@ -57,5 +57,5 @@ buck-out/
 
 # Configuation files
 #
-/backend/config.js
+/backend/config/
 ssl/
