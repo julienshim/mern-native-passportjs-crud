@@ -17,18 +17,14 @@ app.use(passport.session());
 //Set up routes
 app.use('/auth', authRoutes);
 
-// Launch the server on the port 3000
-// const server = app.listen(3000, () => {
-//   const { address, port } = server.address();
-//   console.log(`Listening at http://${address}:${port}`);
-// });
-
+//Since Facebook OAuth requires SSL, we must creat cert, key, and ca PEM/CRT files to secure localhost
 const httpsOptions = {
   cert: fs.readFileSync(path.join(__dirname, 'ssl', './server-crt.pem')),
   key: fs.readFileSync(path.join(__dirname, 'ssl', './server-key.pem')),
   ca: fs.readFileSync(path.join(__dirname, 'ssl', './ca-crt.pem')),
 }
 
+//Launch secure server on PORT 3000
 https.createServer(httpsOptions, app)
   .listen(PORT, function() {
     console.log(`App is listening at https://localhost:${PORT}`);
