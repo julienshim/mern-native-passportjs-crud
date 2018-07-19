@@ -104,7 +104,22 @@ export default class App extends Component {
             </View>
         }
         {/* Login buttons */}
+        { user
+        ? //if user is logged out
         <View style={styles.buttons}>
+            <Icon.Button
+                name="sign-out"
+                backgroundColor="#999"
+                onPress={this.handleLogout}
+                {...iconStyles}
+              >
+              Logout
+            </Icon.Button>
+            </View>
+        : //shot logged out if so
+
+
+            <View style={styles.buttons}>
           <Icon.Button
             name="facebook"
             backgroundColor="#3b5998"
@@ -122,6 +137,8 @@ export default class App extends Component {
             Or with Google
           </Icon.Button>
         </View>
+        }
+        
       </View>
     );
   }
