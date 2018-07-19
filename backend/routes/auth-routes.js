@@ -3,6 +3,14 @@ import passport from 'passport';
 
 const router = express.Router();
 
+// Auth Logout
+router.get('/logout', (req, res) => {
+  //handle with passport
+  req.logout();
+  res.redirect('OAuthLogin://login?user=' + JSON.stringify(req.user));
+  console.log('User is logged out');
+});
+
 // Set up Facebook auth routes
 router.get('/facebook', passport.authenticate('facebook', {scope: ['email']}));
 
