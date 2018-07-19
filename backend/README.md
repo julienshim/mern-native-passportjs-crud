@@ -54,8 +54,13 @@ export const mongodb = {
 3)  Server SSL due to Facebook OAuth requirements.
 
 ```
-
-
+.
+├── 
+├── backend
+|   └── ssl
+|        └── <ssl certificates go here>
+|  
+|   
 ```
 
 4) `npm start` to launch the backend server
