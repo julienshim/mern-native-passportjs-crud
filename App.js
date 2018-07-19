@@ -81,14 +81,6 @@ export default class App extends Component {
               <View style={styles.avatar}>
                 <Image source={{ uri: user.avatar }} style={styles.avatarImage} />
               </View>
-              <Icon.Button
-                name="sign-out"
-                backgroundColor="#999"
-                onPress={this.handleLogout}
-                {...iconStyles}
-              >
-              Logout
-              </Icon.Button>
             </View>
           : // Show Please log in message if not
             <View style={styles.content}>
