@@ -45,6 +45,10 @@ export const google = {
   clientSecret: 'INSERT-CLIENT-SECRET-HERE',
   callbackURL: 'INSERT-CALLBACK-URL-HERE'
 };
+
+export const mongodb = {
+  dbURI: 'mongodb://localhost/untitledProject'
+};
 ```
 
 3)  Server SSL due to Facebook OAuth requirements.
