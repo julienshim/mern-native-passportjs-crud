@@ -10,7 +10,7 @@ There relationship between React Native and traditional servers is poorly docume
 
 **Backend Setup**
 
-See /backend [README](https://github.com/jerauld/untitledProject/tree/master/backend)
+See /backend [README](https://github.com/julienshim/untitledProject/tree/master/backend)
 
 
 **Client Setup**
