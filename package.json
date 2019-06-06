@@ -1,5 +1,5 @@
 {
-  "name": "untitledProject",
+  "name": "untitled-project",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -9,7 +9,7 @@
   "dependencies": {
     "babel-core": "^6.26.3",
     "react": "^16.6.3",
-    "react-native": "^0.58.4",
+    "react-native": "^0.59.9",
     "react-native-safari-view": "^2.1.0",
     "react-native-vector-icons": "^6.0.2"
   },
@@ -17,7 +17,7 @@
     "@babel/core": "^7.1.2",
     "babel-jest": "^24.1.0",
     "jest": "^24.1.0",
-    "metro-react-native-babel-preset": "^0.51.1",
+    "metro-react-native-babel-preset": "^0.54.1",
     "react-test-renderer": "^16.8.1"
   },
   "jest": {
