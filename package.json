@@ -11,7 +11,7 @@
     "lodash": "^4.17.15",
     "mongoose": "^5.9.13",
     "react": "^16.13.1",
-    "react-native": "^0.62.2",
+    "react-native": "^0.62.3",
     "react-native-safari-view": "^2.1.0",
     "react-native-vector-icons": "^6.6.0",
     "ws": "^7.2.5"
